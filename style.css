@@ -1,0 +1,181 @@
+html {
+    font-family: 'Kosugi Maru', sans-serif;
+}
+.wrapper {
+    margin: 0 auto 15em;
+    max-width: 960px;
+}
+h1 {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    color: #000000;
+    font-size: 35px;
+    text-shadow: 1.5px 1.5px 0px rgba(255, 255, 255, 1), 3px 3px 5px rgb(218, 218, 218);
+    font-weight: bold;
+}
+h1:hover {
+    cursor: pointer;
+}
+h2 {
+    font-size: 26px;
+    font-weight: lighter;
+    letter-spacing: 0.15em;
+}
+h3 {
+    margin-left: 1em;
+}
+
+/* アコーディオン */
+.accordion {
+    width: 500px;
+    margin: 0 auto;
+}
+.accordion-trigger {
+    margin: 0;
+    padding: 10px;
+    display: block;
+    background: #333;
+    text-align: center;
+    color: #FFF;
+    border-top: 1px solid #fff;
+}
+.accordion-trigger:hover {
+    cursor: pointer;
+    background: rgb(71, 71, 71);
+}
+.accordion-content {
+    margin: 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    display: none;
+}
+.show {
+    display: block;
+}
+.container.hidden-answer {
+    display: none;
+}
+.container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.clear-container {
+    display: flex;
+    justify-content: center;
+    margin: 1.5em auto;
+}
+
+/* 入力フォーム */
+input:focus {
+    box-shadow: 0 0 7px #1ABC9C;
+    border: 1px solid #1ABC9C;
+}
+input[type="number"] {
+    border-radius: 25%;
+    font-size: 14px;
+    width: 4em;
+    height: 2.5em;
+    margin: 1em;
+}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button:hover {
+    cursor: pointer;
+}
+input.distance-input {
+    width: 5.5em;
+}
+
+/* 計算結果 */
+.output-section {
+    letter-spacing: 0.15em;
+}
+.answer {
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* 各種ボタン */
+.btnCopy, .btnCopied {
+    margin-left: 1.5em;
+    padding: 10px;
+}
+.btnCopy:hover {
+    cursor: pointer;
+    background-color: rgb(221, 221, 221);
+    border-radius: 20%;
+}
+.btnCopy:active {
+    background-color: rgb(180, 180, 180);
+}
+.fa-clipboard {
+    margin-left: 5px;
+}
+.textCopy {
+    margin: 0 5px;
+}
+.btnCopied {
+    color: rgb(66, 219, 73);
+}
+.textCopied {
+    margin: 0 5px;
+}
+.btnClear {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    text-decoration: none;
+    color: #333333;
+    font-size: 18px;
+    letter-spacing: 0.15em;
+    width: 200px;
+    height: 40px;
+    font-weight: bold;
+    border: 2px solid #333333;
+    transition: 0.1s;
+    background-color: #FFFFFF;
+}
+.btnClear:hover {
+    cursor: pointer;
+    color: #fff;
+    background-color: #333;
+}
+.btnClear:active {
+    background-color: rgb(151, 151, 151);
+    border: 2px solid #727272;
+}
+.fa-trash-can {
+    margin: 0 5px;
+}
+.textClear {
+    margin: 0 5px;
+}
+.MarathonType {
+    font-size: 0.8em;
+    margin-left: 1.5em;
+    padding: 5px;
+    border: 2px solid #333333;
+    border-radius: 5px;
+}
+.MarathonType:hover {
+    cursor: pointer;
+    background-color: rgb(203, 252, 255);
+    box-shadow: 0 0 7px #1ABC9C;
+}
+.MarathonType:active {
+    border: 2px solid #1ABC9C;
+    background-color: rgb(177, 248, 253);
+}

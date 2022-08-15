@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png">
+    <link rel="stylesheet" href="sanitize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e2ae82cca0.js" crossorigin="anonymous"></script>
+    <script src="accordion.js" defer></script>
+    <title>ランニング・カリキュレーター｜ランナーに捧げる計算機</title>
+    <meta name="description" content="ランニングの「距離」や「時間」、「ペース」を計算してくれる、シンプルで直感的なツールです。">
+</head>
+<body>
+    <div class="wrapper">
+        <h1 id="h1-title">ランニング・カリキュレーター</h1>
+        <div class="accordion" id="PurposeList">
+
+            <!-- アコーディオンメニュー１：距離を求める -->
+            <h2 class="accordion-trigger">距離を求める</h2>
+            <div class="accordion-content">
+                <div class="container">
+                    <label for="distance-time1"><h3>時間は・・・</h3></label>
+                    <label><input type="number" id="distance-time1" max="99" min="0" maxlength="2" name="distance-input" placeholder="hh" onfocus="this.select();"><span>時間</span></label>
+                    <label><input type="number" id="distance-time2" max="59" min="0" maxlength="2" name="distance-input" placeholder="mm" onfocus="this.select();"><span>分</span></label>
+                    <label><input type="number" id="distance-time3" max="59" min="0" maxlength="2" name="distance-input" placeholder="ss" onfocus="this.select();"><span>秒</span></label>
+                </div>
+                <div class="container">
+                    <label for="distance-pace1"><h3>ペースは・・・</h3></label>
+                    <label><input type="number" id="distance-pace1" max="59" min="0" maxlength="2" name="distance-input" placeholder="mm" onfocus="this.select();"><span>分</span></label>
+                    <label><input type="number" id="distance-pace2" max="59" min="0" maxlength="2" name="distance-input" placeholder="ss" onfocus="this.select();"><span>秒 ／ KM</span></label>
+                </div>
+                <div class="container">
+                    <h3>距離は・・・　</h3>
+                    <div id="distance-answer-box" class="container output-section hidden-answer">
+                        <p id="distance-answer" class="answer"></p>
+                        <div class="btnCopy"><i class="fa-solid fa-clipboard"></i><span class="textCopy">Copy</span></div>
+                        <div class="btnCopied" style="display: none;"><i class="fa-solid fa-circle-check"></i><span class="textCopied">Copied</span></div>
+                    </div>
+                </div>
+                <div class="clear-container">
+                    <div class="btnClear">
+                        <i class="fa-solid fa-trash-can"></i><span class="textClear">Clear</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- アコーディオンメニュー２：時間を求める -->
+            <h2 class="accordion-trigger">時間を求める</h2>
+            <div class="accordion-content">
+                <div class="container">
+                    <label for="time-distance1"><h3>距離は・・・</h3></label>
+                    <input type="number" id="time-distance1" class="distance-input" min="0" maxlength="7" name="time-input" placeholder="km" step="0.1" onfocus="this.select();"><span>KM</span>
+                    <div class="btnMarathon MarathonType">マラソン</div>
+                    <div class="btnHalfMarathon MarathonType">ハーフマラソン</div>
+                </div>
+                <div class="container">
+                    <label for="time-pace1"><h3>ペースは・・・</h3></label>
+                    <label><input type="number" id="time-pace1" max="99" min="0" maxlength="2" name="time-input" placeholder="mm" onfocus="this.select();"><span>分</span></label>
+                    <label><input type="number" id="time-pace2" max="59" min="0" maxlength="2" name="time-input" placeholder="ss" onfocus="this.select();"><span>秒 ／ KM</span></label>
+                </div>
+                <div class="container">
+                    <h3>時間は・・・　</h3>
+                    <div id="time-answer-box" class="container output-section hidden-answer">
+                        <p id="time-answer" class="answer"></p>
+                        <div class="btnCopy"><i class="fa-solid fa-clipboard"></i><span class="textCopy">Copy</span></div>
+                        <div class="btnCopied" style="display: none;"><i class="fa-solid fa-circle-check"></i><span class="textCopied">Copied</span></div>
+                    </div>
+                </div>
+                <div class="clear-container">
+                    <div class="btnClear">
+                        <i class="fa-solid fa-trash-can"></i><span class="textClear">Clear</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- アコーディオンメニュー３：ペースを求める -->
+            <h2 class="accordion-trigger">ペースを求める</h2>
+            <div class="accordion-content">
+                <div class="container">
+                    <label for="pace-distance1"><h3>距離は・・・</h3></label>
+                    <input type="number" id="pace-distance1" class="distance-input" min="0" maxlength="7" name="pace-input" placeholder="km" step="0.1" onfocus="this.select();"><span>KM</span>
+                    <div class="btnMarathon MarathonType">マラソン</div>
+                    <div class="btnHalfMarathon MarathonType">ハーフマラソン</div>
+                </div>
+                <div class="container">
+                    <label for="pace-time1"><h3>時間は・・・</h3></label>
+                    <label><input type="number" id="pace-time1" max="99" min="0" maxlength="2" name="pace-input" placeholder="hh" onfocus="this.select();"><span>時間</span></label>
+                    <label><input type="number" id="pace-time2" max="59" min="0" maxlength="2" name="pace-input" placeholder="mm" onfocus="this.select();"><span>分</span></label>
+                    <label><input type="number" id="pace-time3" max="59" min="0" maxlength="2" name="pace-input" placeholder="ss" onfocus="this.select();"><span>秒</span></label>
+                </div>
+                <div class="container">
+                    <h3>ペースは・・・　</h3>
+                    <div id="pace-answer-box" class="container output-section hidden-answer">
+                        <p id="pace-answer" class="answer"></p>
+                        <div class="btnCopy"><i class="fa-solid fa-clipboard"></i><span class="textCopy">Copy</span></div>
+                        <div class="btnCopied" style="display: none;"><i class="fa-solid fa-circle-check"></i><span class="textCopied">Copied</span></div>
+                    </div>
+                </div>
+                <div class="clear-container">
+                    <div class="btnClear">
+                        <i class="fa-solid fa-trash-can"></i><span class="textClear">Clear</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
