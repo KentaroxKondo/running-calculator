@@ -3,7 +3,6 @@ html {
 }
 .wrapper {
     margin: 0 auto 15em;
-    max-width: 960px;
 }
 h1 {
     text-align: center;
@@ -15,6 +14,10 @@ h1 {
     font-size: 35px;
     text-shadow: 1.5px 1.5px 0px rgba(255, 255, 255, 1), 3px 3px 5px rgb(218, 218, 218);
     font-weight: bold;
+    user-select: none;
+}
+h1 br {
+    display: none;
 }
 h1:hover {
     cursor: pointer;
@@ -23,9 +26,11 @@ h2 {
     font-size: 26px;
     font-weight: lighter;
     letter-spacing: 0.15em;
+    user-select: none;
 }
 h3 {
     margin-left: 1em;
+    user-select: none;
 }
 
 /* アコーディオン */
@@ -169,6 +174,7 @@ input.distance-input {
     padding: 5px;
     border: 2px solid #333333;
     border-radius: 5px;
+    background-color: #fff;
 }
 .MarathonType:hover {
     cursor: pointer;
@@ -178,4 +184,51 @@ input.distance-input {
 .MarathonType:active {
     border: 2px solid #1ABC9C;
     background-color: rgb(177, 248, 253);
+}
+
+/* レスポンシブ対応 */
+@media
+ (max-width: 499px) {
+    /* h1タイトルを<br>の位置で折り返し */
+    h1 br {
+        display: inline;
+    }
+    h3 {
+        text-align: center;
+        margin-bottom: 0.3em;
+    }
+    .accordion {
+        width: auto;
+        margin: 0 auto;
+    }
+    /* フレックスボックス部分を解除 */
+    .container {
+        display: block;
+        padding-bottom: 1em;
+        border-bottom: 1.8px solid #ccc;
+    }
+    .container.output-section {
+        border: none;
+    }
+    p.answer {
+        display: inline;
+    }
+    .output-section {
+        display: flex;
+        justify-content: center;
+        margin-left: 2em;
+    }
+    .MarathonType {
+        display: inline-block;
+        text-align: center;
+        width: auto;
+    }
+    /* 計算結果の表示・非表示により縦幅が伸縮しないようにサイズを指定 */
+    .answer-container {
+        height: 7em;
+    }
+    .clear-container {
+        margin-top: 2em;
+        margin-bottom: 1em;
+    }
 }

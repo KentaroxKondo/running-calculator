@@ -17,7 +17,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <h1 id="h1-title">ランニング・カリキュレーター</h1>
+        <h1 id="h1-title">ランニング・<br>カリキュレーター</h1>
         <div class="accordion" id="PurposeList">
 
             <!-- アコーディオンメニュー１：距離を求める -->
@@ -34,7 +34,7 @@
                     <label><input type="number" id="distance-pace1" max="59" min="0" maxlength="2" name="distance-input" placeholder="mm" onfocus="this.select();"><span>分</span></label>
                     <label><input type="number" id="distance-pace2" max="59" min="0" maxlength="2" name="distance-input" placeholder="ss" onfocus="this.select();"><span>秒 ／ KM</span></label>
                 </div>
-                <div class="container">
+                <div class="container answer-container">
                     <h3>距離は・・・　</h3>
                     <div id="distance-answer-box" class="container output-section hidden-answer">
                         <p id="distance-answer" class="answer"></p>
@@ -54,7 +54,7 @@
             <div class="accordion-content">
                 <div class="container">
                     <label for="time-distance1"><h3>距離は・・・</h3></label>
-                    <input type="number" id="time-distance1" class="distance-input" min="0" maxlength="7" name="time-input" placeholder="km" step="0.1" onfocus="this.select();"><span>KM</span>
+                    <label><input type="number" id="time-distance1" class="distance-input" min="0" maxlength="6" name="time-input" placeholder="km" step="0.1" onfocus="this.select();"><span>KM</span></label>
                     <div class="btnMarathon MarathonType">マラソン</div>
                     <div class="btnHalfMarathon MarathonType">ハーフマラソン</div>
                 </div>
@@ -63,7 +63,7 @@
                     <label><input type="number" id="time-pace1" max="99" min="0" maxlength="2" name="time-input" placeholder="mm" onfocus="this.select();"><span>分</span></label>
                     <label><input type="number" id="time-pace2" max="59" min="0" maxlength="2" name="time-input" placeholder="ss" onfocus="this.select();"><span>秒 ／ KM</span></label>
                 </div>
-                <div class="container">
+                <div class="container answer-container">
                     <h3>時間は・・・　</h3>
                     <div id="time-answer-box" class="container output-section hidden-answer">
                         <p id="time-answer" class="answer"></p>
@@ -83,7 +83,7 @@
             <div class="accordion-content">
                 <div class="container">
                     <label for="pace-distance1"><h3>距離は・・・</h3></label>
-                    <input type="number" id="pace-distance1" class="distance-input" min="0" maxlength="7" name="pace-input" placeholder="km" step="0.1" onfocus="this.select();"><span>KM</span>
+                    <label><input type="number" id="pace-distance1" class="distance-input" min="0" maxlength="6" name="pace-input" placeholder="km" step="0.1" onfocus="this.select();"><span>KM</span></label>
                     <div class="btnMarathon MarathonType">マラソン</div>
                     <div class="btnHalfMarathon MarathonType">ハーフマラソン</div>
                 </div>
@@ -93,7 +93,7 @@
                     <label><input type="number" id="pace-time2" max="59" min="0" maxlength="2" name="pace-input" placeholder="mm" onfocus="this.select();"><span>分</span></label>
                     <label><input type="number" id="pace-time3" max="59" min="0" maxlength="2" name="pace-input" placeholder="ss" onfocus="this.select();"><span>秒</span></label>
                 </div>
-                <div class="container">
+                <div class="container answer-container">
                     <h3>ペースは・・・　</h3>
                     <div id="pace-answer-box" class="container output-section hidden-answer">
                         <p id="pace-answer" class="answer"></p>

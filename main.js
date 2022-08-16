@@ -226,7 +226,7 @@
         const $pace_answer = document.getElementById("pace-answer");
         const $pace_answer_box = document.getElementById("pace-answer-box");
 
-        if (distance_km === 0) {
+        if (total_pace_in_seconds === 0) {
             $pace_answer_box.classList.add("hidden-answer");
         } else if (0 < total_pace_in_seconds && total_pace_in_seconds < 60) {
             $pace_answer.textContent = total_pace_in_seconds + "秒";
